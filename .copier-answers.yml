@@ -1,0 +1,10 @@
+# Written by Copier from samclement/swhurl-app-template-typescript; `copier update` reads it. Do not edit.
+_commit: v0.2.7
+_src_path: https://github.com/samclement/swhurl-app-template-typescript.git
+api: none
+app_name: swhurl-try-18
+database: none
+description: 'Throwaway: feature flag overrides live test'
+events: none
+flags: example
+kind: web
