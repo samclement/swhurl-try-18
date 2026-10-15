@@ -3,7 +3,7 @@ import { OpenAPIHono } from "@hono/zod-openapi";
 import { trace } from "@opentelemetry/api";
 import pino from "pino";
 import { declaredPublishes, publish } from "./events.js";
-import { flags, flagsLoaded } from "./flags.js";
+import { flagsLoaded } from "./flags.js";
 import { type Caller, Unauthorized, identify, notify, service } from "./platform.js";
 
 export const logger = pino({
@@ -89,9 +89,7 @@ async function hello(caller: Caller) {
       logger.error({ err: error, event: published, trace_id: traceId() }, "event not published");
     }
   }
-  // An example of a feature flag: shout is declared in swhurl.yaml, on in staging only.
-  const greeting = `hello from ${serviceName}`;
-  const message = flags.shout ? greeting.toUpperCase() : greeting;
+  const message = `hello from ${serviceName}`;
   return {
     message,
     service: serviceName,
