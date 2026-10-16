@@ -57,3 +57,4 @@ npm run build && npm test               # the tests run against the built app
 To see telemetry locally, `npm run build`, then `OTEL_TRACES_EXPORTER=console node --import ./dist/instrumentation.js dist/main.js` prints spans (or run an OpenTelemetry collector on `localhost:4318` and drop the variable).
 
 <!-- deploy timing check, 16 October 2026 -->
+<!-- deploy timing check 04:36:13 -->
