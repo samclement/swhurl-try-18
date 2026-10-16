@@ -8,3 +8,4 @@ healthPath: /healthz
 uid: 65532
 telemetry: otlp
 autoDeploy: true
+secrets: [API_TOKEN, WEBHOOK_KEY]
