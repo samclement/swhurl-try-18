@@ -8,4 +8,3 @@ healthPath: /healthz
 uid: 65532
 telemetry: otlp
 autoDeploy: true
-resources: {cpu: "1"}
