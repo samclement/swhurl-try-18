@@ -58,3 +58,4 @@ To see telemetry locally, `npm run build`, then `OTEL_TRACES_EXPORTER=console no
 
 <!-- deploy timing check, 16 October 2026 -->
 <!-- deploy timing check 04:36:13 -->
+<!-- deploy timing check 04:38:20 -->
