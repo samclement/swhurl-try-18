@@ -34,11 +34,11 @@ ENV NODE_OPTIONS="--import /app/dist/instrumentation.js" \
     OTEL_TRACES_EXPORTER=otlp \
     OTEL_METRICS_EXPORTER=otlp \
     OTEL_LOGS_EXPORTER=none \
-    PORT=8080
+    PORT=9090
 WORKDIR /app
 COPY --from=prod-deps --chown=65532:65532 /app/node_modules ./node_modules
 COPY --from=prod-deps --chown=65532:65532 /app/package.json ./package.json
 # Depending on the check stage makes a failing test stop the runtime image build.
 COPY --from=check --chown=65532:65532 /app/dist ./dist
-EXPOSE 8080
+EXPOSE 9090
 CMD ["dist/main.js"]

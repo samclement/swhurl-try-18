@@ -4,7 +4,7 @@ import { app, logger } from "./app.js";
 import { closeEvents, declaredSubscriptions, subscribe } from "./events.js";
 import { watchFlags } from "./flags.js";
 
-const port = Number.parseInt(process.env.PORT ?? "8080", 10);
+const port = Number.parseInt(process.env.PORT ?? "9090", 10);
 const serviceName = process.env.OTEL_SERVICE_NAME ?? "swhurl-app";
 
 const server = serve({ fetch: app.fetch, port, hostname: "0.0.0.0" }, () => {
